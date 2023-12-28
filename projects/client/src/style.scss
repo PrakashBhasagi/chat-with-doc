@@ -1,0 +1,204 @@
+:root {
+  --footer-height: 110px;
+  --header-height: 40px;
+  --el-color-primary: #6576db;
+  --el-text-color-bulb: #facf55;
+  --el-border-color-primary: #c7c7c7;
+  --el-color-primary-light-3: #939fe6;
+
+  font-family: Poppins, 'PingFang SC', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      90deg,
+      #fff0 25%,
+      rgba(144, 147, 153, 60%) 25%,
+      rgba(144, 147, 153, 60%) 75%,
+      #fff0 75%
+    );
+
+    &:horizontal {
+      background: linear-gradient(
+        180deg,
+        #fff0 25%,
+        rgba(144, 147, 153, 60%) 25%,
+        rgba(144, 147, 153, 60%) 75%,
+        #fff0 75%
+      );
+    }
+  }
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.flicker {
+  display: inline-block;
+  width: 4px;
+  font-size: 1em;
+  line-height: 1;
+  background-color: #333;
+  animation: flicker 1s steps(1, start) infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.el-popper.is-dark {
+  max-width: 600px;
+  background: var(--el-color-primary);
+  border: 1px solid var(--el-color-primary);
+
+  .el-popper__arrow {
+    &::before {
+      background: var(--el-color-primary);
+      border: 1px solid var(--el-color-primary);
+    }
+  }
+}
+
+body,
+html,
+ul,
+ol,
+li,
+div,
+textarea,
+table,
+pre {
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(
+      90deg,
+      #fff0 25%,
+      rgba(144, 147, 153, 0%) 25%,
+      rgba(144, 147, 153, 0%) 75%,
+      #fff0 75%
+    );
+
+    &:horizontal {
+      background: linear-gradient(
+        180deg,
+        #fff0 25%,
+        rgba(144, 147, 153, 0%) 25%,
+        rgba(144, 147, 153, 0%) 75%,
+        #fff0 75%
+      );
+    }
+
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      90deg,
+      #fff0 25%,
+      rgba(144, 147, 153, 60%) 25%,
+      rgba(144, 147, 153, 60%) 75%,
+      #fff0 75%
+    );
+
+    &:horizontal {
+      background: linear-gradient(
+        180deg,
+        #fff0 25%,
+        rgba(144, 147, 153, 60%) 25%,
+        rgba(144, 147, 153, 60%) 75%,
+        #fff0 75%
+      );
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+.dot-loading {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  line-height: 1;
+  text-align: left;
+  vertical-align: -0.25ex;
+
+  &::before {
+    display: block;
+    white-space: pre-wrap;
+    animation: dot-loading 2s infinite step-start both;
+    content: '...\A..\A.';
+  }
+}
+
+@keyframes dot-loading {
+  33% {
+    transform: translateY(-2em);
+  }
+
+  66% {
+    transform: translateY(-1em);
+  }
+}
+
+.markdown-body {
+  ol {
+    padding-left: 1.5em !important;
+    list-style: decimal !important;
+  }
+
+  ul {
+    padding-left: 1.5em !important;
+    list-style: disc !important;
+  }
+
+  li {
+    list-style: unset !important;
+  }
+
+  table {
+    display: block !important;
+
+    tbody {
+      white-space: nowrap !important;
+    }
+  }
+
+  table tr {
+    word-break: keep-all !important;
+  }
+}
