@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host dev.sure-shield.com --port 80 --force",
+    "dev": "vite --port 80 --force",
     "build": "vite build --watch=false --mode=production",
     "preview": "vite preview",
     "test:e2e": "cypress open",
