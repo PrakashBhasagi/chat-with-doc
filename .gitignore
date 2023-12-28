@@ -31,7 +31,6 @@ public/pdf-document-viewer
 stats.html
 
 .nvmrc
-projects/server/static/
 .env
 README.md
 zgithub/workflows/build.yml
